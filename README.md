@@ -82,11 +82,9 @@ Then to actually map the objects from the JSON response you only have to pass th
         var callbackJSON = {(status:Int, jsonResponse:AnyObject!) -> () in
             var employeeContainer:EmployeeContainer = EmployeeContainer(jsonData: jsonResponse)
             
-            // Direkter zugriff
             println(employeeContainer.employees[0].firstname)
             println(employeeContainer.employees[1].firstname)
             
-            // Oder über alle loopen
             for employee in employeeContainer.employees {
                 println("Firstname: \(employee.firstname) Lastname: \(employee.lastname) age: \(employee.age)");
             }
