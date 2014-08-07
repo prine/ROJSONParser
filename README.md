@@ -2,7 +2,7 @@ ROJSONParser
 ============
 
 Is a very light-weight and straighforward JSON to Object-Mapper. You can define your class structure and directly
-define in there your accessed properties in the JSON file.
+define in there your accessed properties in the JSON file. The whole parsing of the JSON file is done by the awesome work of David Owens (https://github.com/owensd/json-swift).
 
 Example Employees.json
 
