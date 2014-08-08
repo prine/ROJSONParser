@@ -17,9 +17,7 @@ class ViewController: UIViewController {
         
         var urlToJSON = "http://prine.ch/employees.json"
         
-        var callbackJSON = {(status:Int, jsonResponse:AnyObject!) -> () in
-            var employeeContainer:EmployeeContainer = EmployeeContainer(jsonData: jsonResponse)
-            
+        var callbackJSON = {(status:Int, employeeContainer:EmployeeContainer) -> () in
             println(employeeContainer.employees[0].firstname)
             println(employeeContainer.employees[1].firstname)
             

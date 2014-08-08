@@ -65,4 +65,12 @@ class BaseWebservice {
         // Pass the data through the callback back to the sender
         
     }
+    
+    func get<T: ROJSONObject>(urlString:String, callback: (Int, T) -> ()) {
+        var webserviceCallback = {(status:Int, response:AnyObject!) -> () in
+            callback(status, T(jsonData: response))
+        }
+        
+        self.get(urlString, callback: webserviceCallback)
+    }
 }
