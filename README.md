@@ -75,23 +75,20 @@ class EmployeeContainer : ROJSONObject {
 Then to actually map the objects from the JSON response you only have to pass the data into the EmployeeContainer class as param in the constructor. It does automatically create your data model.
 
 ```swift
-  var baseWebservice:BaseWebservice = BaseWebservice();
+ var baseWebservice:BaseWebservice = BaseWebservice();
         
-        var urlToJSON = "http://prine.ch/employees.json"
+  var urlToJSON = "http://prine.ch/employees.json"
         
-        var callbackJSON = {(status:Int, jsonResponse:AnyObject!) -> () in
-            var employeeContainer:EmployeeContainer = EmployeeContainer(jsonData: jsonResponse)
+  var callbackJSON = {(status:Int, employeeContainer:EmployeeContainer) -> () in
+    println(employeeContainer.employees[0].firstname)
+    println(employeeContainer.employees[1].firstname)
             
-            println(employeeContainer.employees[0].firstname)
-            println(employeeContainer.employees[1].firstname)
-            
-            for employee in employeeContainer.employees {
-                println("Firstname: \(employee.firstname) Lastname: \(employee.lastname) age: \(employee.age)");
-            }
-        }
-        
-        baseWebservice.get(urlToJSON, callback:callbackJSON)
+    for employee in employeeContainer.employees {
+      println("Firstname: \(employee.firstname) Lastname: \(employee.lastname) age: \(employee.age)")
     }
+  }
+        
+  baseWebservice.get(urlToJSON, callback:callbackJSON)
 ```
 
 
