@@ -82,8 +82,22 @@ class Value<T> {
         return rojsonobject.getValue(key) as T
     }
     
-    class func getArray<T : ROJSONObject>(rojsonobject:ROJSONObject, key:String) -> [T] {
-        return rojsonobject.getArray(key) as [T]
+    class func getArray<T : ROJSONObject>(rojsonobject:ROJSONObject, key:String? = nil) -> [T] {
+        
+        // If there is a key given fetch the array from the dictionary directly if not fetch all objects and pack it into an array
+        if let dictKey = key {
+            return rojsonobject.getArray(dictKey) as [T]
+        } else {
+            var objects = [T]()
+            
+            for jsonValue in rojsonobject.jsonData.array! {
+                var object = T()
+                object.jsonData = jsonValue
+                objects.append(object)
+            }
+            
+            return objects
+        }
     }
     
     class func getDate(rojsonobject:ROJSONObject, key:String, dateFormatter:NSDateFormatter? = nil) -> NSDate? {
