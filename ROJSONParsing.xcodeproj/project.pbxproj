@@ -19,6 +19,7 @@
 		CB1C5CF519942CE60045197C /* BaseWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C5CF419942CE60045197C /* BaseWebservice.swift */; };
 		CB1C5CFB19942E790045197C /* EmployeeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C5CFA19942E790045197C /* EmployeeContainer.swift */; };
 		CB1C5CFD19942E800045197C /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C5CFC19942E7F0045197C /* Employee.swift */; };
+		CBF3C15D1999133D0012E811 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF3C15C1999133D0012E811 /* Alamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CB1C5CF419942CE60045197C /* BaseWebservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebservice.swift; sourceTree = "<group>"; };
 		CB1C5CFA19942E790045197C /* EmployeeContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeContainer.swift; sourceTree = "<group>"; };
 		CB1C5CFC19942E7F0045197C /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		CBF3C15C1999133D0012E811 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +96,7 @@
 				CB1C5CCE19942C870045197C /* ViewController.swift */,
 				CB1C5CD019942C870045197C /* Main.storyboard */,
 				CB1C5CF919942DEA0045197C /* DataClasses */,
-				CB1C5CF819942D3F0045197C /* Webservice */,
-				CB1C5CEA19942CB30045197C /* ROJSON */,
-				CB1C5CE919942CAC0045197C /* JSON */,
+				CBF3C15B199913260012E811 /* Networking */,
 				CB1C5CD319942C870045197C /* Images.xcassets */,
 				CB1C5CCA19942C870045197C /* Supporting Files */,
 			);
@@ -162,6 +162,17 @@
 				CB1C5CFC19942E7F0045197C /* Employee.swift */,
 			);
 			name = DataClasses;
+			sourceTree = "<group>";
+		};
+		CBF3C15B199913260012E811 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CBF3C15C1999133D0012E811 /* Alamofire.swift */,
+				CB1C5CF819942D3F0045197C /* Webservice */,
+				CB1C5CEA19942CB30045197C /* ROJSON */,
+				CB1C5CE919942CAC0045197C /* JSON */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 				CB1C5CF119942CCF0045197C /* JSON.swift in Sources */,
 				CB1C5CF019942CCF0045197C /* Failable.swift in Sources */,
 				CB1C5CF519942CE60045197C /* BaseWebservice.swift in Sources */,
+				CBF3C15D1999133D0012E811 /* Alamofire.swift in Sources */,
 				CB1C5CFB19942E790045197C /* EmployeeContainer.swift in Sources */,
 				CB1C5CEF19942CCF0045197C /* Error.swift in Sources */,
 				CB1C5CCD19942C870045197C /* AppDelegate.swift in Sources */,
@@ -459,6 +471,7 @@
 				CB1C5CE519942C870045197C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB1C5CE619942C870045197C /* Build configuration list for PBXNativeTarget "ROJSONParsingTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +480,7 @@
 				CB1C5CE819942C870045197C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
