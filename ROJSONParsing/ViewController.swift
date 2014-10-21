@@ -17,13 +17,10 @@ class ViewController: UIViewController {
         
         var urlToJSON = "http://prine.ch/employees.json"
         
-        var callbackJSON = {(status:Int, employeeContainer:EmployeeContainer) -> () in
-            println(employeeContainer.employees[0].firstname)
-            println(employeeContainer.employees[1].firstname)
-            
-            for employee in employeeContainer.employees {
-                println("Firstname: \(employee.firstname) Lastname: \(employee.lastname) age: \(employee.age)");
-            }
+        var callbackJSON = {(status:Int, employees:EmployeeContainer) -> () in
+            println("Firstname: " + employees.employees[0].firstname)
+            println("Lastname: " + employees.employees[0].firstname)
+            println("Age: \(employees.employees[0].age)")
         }
         
         baseWebservice.get(urlToJSON, callback:callbackJSON)

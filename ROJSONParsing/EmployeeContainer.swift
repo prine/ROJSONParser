@@ -20,4 +20,14 @@ class EmployeeContainer : ROJSONObject {
     lazy var employees:[Employee] = {
         return Value<[Employee]>.getArray(self, key: "employees") as [Employee]
     }()
+    
+    override class func makeInstance() -> ROJSONObject
+    {
+        return EmployeeContainer()
+    }
+    
+    override class func makeInstance(jsonData:AnyObject) -> ROJSONObject
+    {
+        return EmployeeContainer(jsonData:jsonData)
+    }
 }

@@ -11,7 +11,7 @@ import Foundation
 class ROJSONObject {
     
     var jsonData:JSON
-    
+
     required init() {
         // Default constructor
         jsonData = []
@@ -19,50 +19,22 @@ class ROJSONObject {
     
     required init(jsonData:AnyObject) {
         self.jsonData = JSON(jsonData)
+        println(self.jsonData)
     }
 
-    func getJSONValue(key:String) -> JSValue {
+    func getJSONValue(key:String) -> JSON {
         return jsonData[key]
     }
     
-    func getValue(key:String) -> Any {
-        
-        var jsonValue = jsonData[key]
-        
-        switch jsonValue {
-        case .JSBool(let bool):
-            return jsonValue.bool!
-            
-        case .JSNumber(let number):
-            if ceil(number) == number {
-                return Int(number)
-            } else {
-                return number
-            }
-            
-        case .JSString(let string):
-            return jsonValue.string!
-            
-        case .JSArray(let array):
-            return jsonValue.array!
-            
-        case .JSObject(let dict):
-            return jsonValue.object!
-            
-        case .JSNull:
-            return "null"
-            
-        default:
-            assert(true, "This should never be reached")
-            return ""
-        }
+    func getValue(key:String) -> AnyObject {
+        return jsonData[key].object
     }
     
     func getArray<T : ROJSONObject>(key:String) -> [T] {
         var elements = [T]()
         
         for jsonValue in getJSONValue(key).array! {
-            var element = T()
+            var element = T.makeInstance() as T
             
             element.jsonData = jsonValue
             elements.append(element)
@@ -74,6 +46,16 @@ class ROJSONObject {
     func getDate(key:String, dateFormatter:NSDateFormatter? = nil) -> NSDate? {
         // TODO: implement date parsing or use the helper class which is also included in the RASCOcloud
         return nil
+    }
+    
+    class func makeInstance() -> ROJSONObject
+    {
+        return ROJSONObject()
+    }
+    
+    class func makeInstance(jsonData:AnyObject) -> ROJSONObject
+    {
+        return ROJSONObject(jsonData:jsonData)
     }
 }
 
@@ -91,7 +73,7 @@ class Value<T> {
             var objects = [T]()
             
             for jsonValue in rojsonobject.jsonData.array! {
-                var object = T()
+                var object = T.makeInstance() as T
                 object.jsonData = jsonValue
                 objects.append(object)
             }

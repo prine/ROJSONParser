@@ -12,14 +12,12 @@
 		CB1C5CD219942C870045197C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1C5CD019942C870045197C /* Main.storyboard */; };
 		CB1C5CD419942C870045197C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1C5CD319942C870045197C /* Images.xcassets */; };
 		CB1C5CE019942C870045197C /* ROJSONParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C5CDF19942C870045197C /* ROJSONParsingTests.swift */; };
-		CB1C5CEF19942CCF0045197C /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C5CEB19942CCF0045197C /* Error.swift */; };
-		CB1C5CF019942CCF0045197C /* Failable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C5CEC19942CCF0045197C /* Failable.swift */; };
-		CB1C5CF119942CCF0045197C /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C5CEE19942CCF0045197C /* JSON.swift */; };
 		CB1C5CF319942CDB0045197C /* ROJSONObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C5CF219942CDB0045197C /* ROJSONObject.swift */; };
 		CB1C5CF519942CE60045197C /* BaseWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C5CF419942CE60045197C /* BaseWebservice.swift */; };
 		CB1C5CFB19942E790045197C /* EmployeeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C5CFA19942E790045197C /* EmployeeContainer.swift */; };
 		CB1C5CFD19942E800045197C /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1C5CFC19942E7F0045197C /* Employee.swift */; };
-		CBF3C15D1999133D0012E811 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF3C15C1999133D0012E811 /* Alamofire.swift */; };
+		CB1CDDB019F681870084CC8D /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CB1CDDAA19F6811D0084CC8D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB1CDDD119F688D50084CC8D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1CDDD019F688D50084CC8D /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +28,42 @@
 			remoteGlobalIDString = CB1C5CC619942C870045197C;
 			remoteInfo = ROJSONParsing;
 		};
+		CB1CDDA919F6811D0084CC8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB1CDDA419F6811D0084CC8D /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		CB1CDDAB19F6811D0084CC8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB1CDDA419F6811D0084CC8D /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		CB1CDDAD19F681340084CC8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB1CDDA419F6811D0084CC8D /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CB1CDDAF19F681690084CC8D /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CB1CDDB019F681870084CC8D /* Alamofire.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CB1C5CC719942C870045197C /* ROJSONParsing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ROJSONParsing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,15 +75,13 @@
 		CB1C5CD919942C870045197C /* ROJSONParsingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ROJSONParsingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1C5CDE19942C870045197C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB1C5CDF19942C870045197C /* ROJSONParsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROJSONParsingTests.swift; sourceTree = "<group>"; };
-		CB1C5CEB19942CCF0045197C /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		CB1C5CEC19942CCF0045197C /* Failable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Failable.swift; sourceTree = "<group>"; };
-		CB1C5CED19942CCF0045197C /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		CB1C5CEE19942CCF0045197C /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		CB1C5CF219942CDB0045197C /* ROJSONObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROJSONObject.swift; sourceTree = "<group>"; };
 		CB1C5CF419942CE60045197C /* BaseWebservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebservice.swift; sourceTree = "<group>"; };
 		CB1C5CFA19942E790045197C /* EmployeeContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeContainer.swift; sourceTree = "<group>"; };
 		CB1C5CFC19942E7F0045197C /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
-		CBF3C15C1999133D0012E811 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		CB1CDDA419F6811D0084CC8D /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		CB1CDDCF19F688D50084CC8D /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
+		CB1CDDD019F688D50084CC8D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				CB1C5CC919942C870045197C /* ROJSONParsing */,
+				CB1CDD9619F680B70084CC8D /* Frameworks */,
 				CB1C5CDC19942C870045197C /* ROJSONParsingTests */,
 				CB1C5CC819942C870045197C /* Products */,
 			);
@@ -131,10 +163,8 @@
 		CB1C5CE919942CAC0045197C /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				CB1C5CEB19942CCF0045197C /* Error.swift */,
-				CB1C5CEC19942CCF0045197C /* Failable.swift */,
-				CB1C5CED19942CCF0045197C /* JSON.h */,
-				CB1C5CEE19942CCF0045197C /* JSON.swift */,
+				CB1CDDCF19F688D50084CC8D /* SwiftyJSON.h */,
+				CB1CDDD019F688D50084CC8D /* SwiftyJSON.swift */,
 			);
 			name = JSON;
 			sourceTree = "<group>";
@@ -164,10 +194,34 @@
 			name = DataClasses;
 			sourceTree = "<group>";
 		};
+		CB1CDD9619F680B70084CC8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB1CDD9719F680BF0084CC8D /* Alamofire */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB1CDD9719F680BF0084CC8D /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				CB1CDDA419F6811D0084CC8D /* Alamofire.xcodeproj */,
+			);
+			name = Alamofire;
+			sourceTree = "<group>";
+		};
+		CB1CDDA519F6811D0084CC8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB1CDDAA19F6811D0084CC8D /* Alamofire.framework */,
+				CB1CDDAC19F6811D0084CC8D /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CBF3C15B199913260012E811 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				CBF3C15C1999133D0012E811 /* Alamofire.swift */,
 				CB1C5CF819942D3F0045197C /* Webservice */,
 				CB1C5CEA19942CB30045197C /* ROJSON */,
 				CB1C5CE919942CAC0045197C /* JSON */,
@@ -185,10 +239,12 @@
 				CB1C5CC319942C870045197C /* Sources */,
 				CB1C5CC419942C870045197C /* Frameworks */,
 				CB1C5CC519942C870045197C /* Resources */,
+				CB1CDDAF19F681690084CC8D /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CB1CDDAE19F681340084CC8D /* PBXTargetDependency */,
 			);
 			name = ROJSONParsing;
 			productName = ROJSONParsing;
@@ -242,6 +298,12 @@
 			mainGroup = CB1C5CBE19942C870045197C;
 			productRefGroup = CB1C5CC819942C870045197C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CB1CDDA519F6811D0084CC8D /* Products */;
+					ProjectRef = CB1CDDA419F6811D0084CC8D /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CB1C5CC619942C870045197C /* ROJSONParsing */,
@@ -249,6 +311,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CB1CDDAA19F6811D0084CC8D /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = CB1CDDA919F6811D0084CC8D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CB1CDDAC19F6811D0084CC8D /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = CB1CDDAB19F6811D0084CC8D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CB1C5CC519942C870045197C /* Resources */ = {
@@ -277,12 +356,9 @@
 				CB1C5CCF19942C870045197C /* ViewController.swift in Sources */,
 				CB1C5CFD19942E800045197C /* Employee.swift in Sources */,
 				CB1C5CF319942CDB0045197C /* ROJSONObject.swift in Sources */,
-				CB1C5CF119942CCF0045197C /* JSON.swift in Sources */,
-				CB1C5CF019942CCF0045197C /* Failable.swift in Sources */,
 				CB1C5CF519942CE60045197C /* BaseWebservice.swift in Sources */,
-				CBF3C15D1999133D0012E811 /* Alamofire.swift in Sources */,
 				CB1C5CFB19942E790045197C /* EmployeeContainer.swift in Sources */,
-				CB1C5CEF19942CCF0045197C /* Error.swift in Sources */,
+				CB1CDDD119F688D50084CC8D /* SwiftyJSON.swift in Sources */,
 				CB1C5CCD19942C870045197C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +378,11 @@
 			isa = PBXTargetDependency;
 			target = CB1C5CC619942C870045197C /* ROJSONParsing */;
 			targetProxy = CB1C5CDA19942C870045197C /* PBXContainerItemProxy */;
+		};
+		CB1CDDAE19F681340084CC8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = CB1CDDAD19F681340084CC8D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -402,6 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ROJSONParsing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -413,6 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ROJSONParsing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

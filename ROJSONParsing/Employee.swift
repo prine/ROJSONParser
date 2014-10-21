@@ -29,4 +29,14 @@ class Employee : ROJSONObject {
     var age:Int {
         return Value<Int>.get(self, key: "age")
     }
+    
+    override class func makeInstance() -> ROJSONObject
+    {
+        return Employee()
+    }
+    
+    override class func makeInstance(jsonData:AnyObject) -> ROJSONObject
+    {
+        return Employee(jsonData:jsonData)
+    }
 }
