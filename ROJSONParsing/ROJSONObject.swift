@@ -19,7 +19,6 @@ class ROJSONObject {
     
     required init(jsonData:AnyObject) {
         self.jsonData = JSON(jsonData)
-        println(self.jsonData)
     }
 
     func getJSONValue(key:String) -> JSON {
