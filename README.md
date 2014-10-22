@@ -2,7 +2,7 @@ ROJSONParser
 ============
 
 Is a very light-weight and straighforward JSON to Object-Mapper. You can define your class structure and directly
-define in there your accessed properties in the JSON file. The whole parsing of the JSON file is done by the awesome work of David Owens (https://github.com/owensd/json-swift).
+define in there your accessed properties in the JSON file. The whole parsing of the JSON file is done by the library SwiftyJSON https://github.com/SwiftyJSON/SwiftyJSON.
 
 Example Employees.json
 
@@ -101,3 +101,7 @@ Firstname: John Lastname: Doe age: 26
 Firstname: Anna Lastname: Smith age: 30
 Firstname: Peter Lastname: Jones age: 45
 ```
+
+Installation
+---
+To use the library you need to install the Alamofire Framework. For further installation guidance visit https://github.com/Alamofire/Alamofire#installation. Additionally copy the SwiftyJSON library into the project. Futher instructions visit https://github.com/SwiftyJSON/SwiftyJSON#integration
