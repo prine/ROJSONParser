@@ -15,12 +15,18 @@ class ViewController: UIViewController {
 
         var baseWebservice:BaseWebservice = BaseWebservice();
         
-        var urlToJSON = "http://prine.ch/employees.json"
+        var urlToJSON = "http://prine.ch/employeesWithout.json"
         
-        var callbackJSON = {(status:Int, employees:EmployeeContainer) -> () in
+        var callbackJSON = {(status:Int, employeeContainer:EmployeeContainer) -> () in
+            
+            println(employeeContainer.employees[0].firstname)
+            println(employeeContainer.employees[0].lastname)
+            
+            /*
             println("Firstname: " + employees.employees[0].firstname)
             println("Lastname: " + employees.employees[0].firstname)
             println("Age: \(employees.employees[0].age)")
+            */
         }
         
         baseWebservice.get(urlToJSON, callback:callbackJSON)

@@ -36,7 +36,7 @@ class BaseWebservice {
     func get<T:ROJSONObject>(urlString:String, callback: (Int, T) -> ()) {
         
         var webserviceCallback = {(status:Int, response:AnyObject?) -> () in
-            callback(status, T.makeInstance(response!) as T)
+            callback(status, (T.self as T.Type)(jsonData: response!))
         }
         
         self.get(urlString, callback: webserviceCallback)

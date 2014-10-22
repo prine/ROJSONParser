@@ -13,7 +13,6 @@ class ROJSONObject {
     var jsonData:JSON
 
     required init() {
-        // Default constructor
         jsonData = []
     }
     
@@ -33,7 +32,7 @@ class ROJSONObject {
         var elements = [T]()
         
         for jsonValue in getJSONValue(key).array! {
-            var element = T.makeInstance() as T
+            var element = (T.self as T.Type)()
             
             element.jsonData = jsonValue
             elements.append(element)
@@ -45,16 +44,6 @@ class ROJSONObject {
     func getDate(key:String, dateFormatter:NSDateFormatter? = nil) -> NSDate? {
         // TODO: implement date parsing or use the helper class which is also included in the RASCOcloud
         return nil
-    }
-    
-    class func makeInstance() -> ROJSONObject
-    {
-        return ROJSONObject()
-    }
-    
-    class func makeInstance(jsonData:AnyObject) -> ROJSONObject
-    {
-        return ROJSONObject(jsonData:jsonData)
     }
 }
 
@@ -72,7 +61,7 @@ class Value<T> {
             var objects = [T]()
             
             for jsonValue in rojsonobject.jsonData.array! {
-                var object = T.makeInstance() as T
+                var object = (T.self as T.Type)()
                 object.jsonData = jsonValue
                 objects.append(object)
             }
