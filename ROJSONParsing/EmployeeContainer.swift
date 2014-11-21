@@ -17,6 +17,10 @@ class EmployeeContainer : ROJSONObject {
         super.init(jsonData: jsonData)
     }
 
+    required init(jsonString: String) {
+        super.init(jsonString:jsonString)
+    }
+
     lazy var employees:[Employee] = {
         return Value<[Employee]>.getArray(self) as [Employee]
     }()

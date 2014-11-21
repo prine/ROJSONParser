@@ -19,6 +19,24 @@ class ROJSONObject {
     required init(jsonData:AnyObject) {
         self.jsonData = JSON(jsonData)
     }
+    
+    required init(jsonString:String) {
+        var data = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        var error:NSError?
+        
+        if let dataTemp = data {
+            var json:AnyObject? = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: &error)
+            
+            if (error != nil) {
+                println("Something went wrong during the creation of the json dict \(error)")
+            } else {
+                self.jsonData = JSON(json!)
+                return
+            }
+        }
+        
+        self.jsonData = JSON("")
+    }
 
     func getJSONValue(key:String) -> JSON {
         return jsonData[key]
@@ -42,7 +60,7 @@ class ROJSONObject {
     }
     
     func getDate(key:String, dateFormatter:NSDateFormatter? = nil) -> NSDate? {
-        // TODO: implement date parsing or use the helper class which is also included in the RASCOcloud
+        // TODO: implement your own data parsing
         return nil
     }
 }

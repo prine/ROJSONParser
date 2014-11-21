@@ -18,6 +18,10 @@ class Employee : ROJSONObject {
         super.init(jsonData: jsonData)
     }
     
+    required init(jsonString: String) {
+        super.init(jsonString:jsonString)
+    }
+    
     var firstname:String {
         return Value<String>.get(self, key: "firstName")
     }

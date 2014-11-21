@@ -17,19 +17,15 @@ class ViewController: UIViewController {
         
         var urlToJSON = "http://prine.ch/employeesWithout.json"
         
-        var callbackJSON = {(status:Int, employeeContainer:EmployeeContainer) -> () in
-            
+        baseWebservice.get(urlToJSON, callback: { (status, employeeContainer:EmployeeContainer) -> () in
             println(employeeContainer.employees[0].firstname)
             println(employeeContainer.employees[0].lastname)
             
-            /*
-            println("Firstname: " + employees.employees[0].firstname)
-            println("Lastname: " + employees.employees[0].firstname)
-            println("Age: \(employees.employees[0].age)")
-            */
-        }
-        
-        baseWebservice.get(urlToJSON, callback:callbackJSON)
+            println("Firstname: " + employeeContainer.employees[0].firstname)
+            println("Lastname: " + employeeContainer.employees[0].firstname)
+            println("Age: \(employeeContainer.employees[0].age)")
+
+        })
     }
 
     override func didReceiveMemoryWarning() {
