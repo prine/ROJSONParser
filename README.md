@@ -1,7 +1,6 @@
 ROJSONParser
 ============
 
-*Notice*
 This lib has been replaced by the new https://github.com/prine/RONetworking lib.
 
 Is a very light-weight and straighforward JSON to object mapper. You can define your class structure and directly
