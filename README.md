@@ -1,14 +1,17 @@
 ROJSONParser
 ============
 
+*Notice*
+This lib has been replaced by the new https://github.com/prine/RONetworking lib.
+
 Is a very light-weight and straighforward JSON to object mapper. You can define your class structure and directly
 define in there your accessed properties in the JSON file. The whole parsing of the JSON file is done by the library SwiftyJSON https://github.com/SwiftyJSON/SwiftyJSON.
 
 Example Employees.json
 
 ```json
-{
-  [{
+[
+  {
     "firstName": "John",
     "lastName": "Doe",
     "age": 26
@@ -22,8 +25,8 @@ Example Employees.json
     "firstName": "Peter",
     "lastName": "Jones",
     "age": 45
-  }]
-}
+  }
+]
 ```
 
 As next step you have to create your data model (EmplyoeeContainer and Employee).
